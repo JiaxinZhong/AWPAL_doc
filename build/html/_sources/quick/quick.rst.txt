@@ -1,4 +1,5 @@
-Quick Start and Demos for the Impatient
+Getting Started
 ==========================================
+Quick Start and Demos for the Impatient
 
 

@@ -1,11 +1,25 @@
 Math
 =======================
 
-Test
-
+.. toctree::
+   BesselJLog_Rothwell
 
 Bessel function
 ---------------------
+
+Calculate the spherical Bessel function
+:math:`J_n(z)`.
+
+Syntax
+^^^^^^^^^^^^^^^^^
+
+``J = SphBesselJ(n, z)``
+
+Input arguments
+^^^^^^^^^^^^^^^^^^^^^^^^
+- **n** --- the order :math:`n`
+- **z** --- the argument :math:`z`
+
 
 .. math:: 
    \nabla^2 f(x) = 21

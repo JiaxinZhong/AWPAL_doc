@@ -11,6 +11,7 @@ AWPAL DOCUMENTATION
    :caption: Contents:
 
    quick/quick
+   demo/demo
    function/function
    issue/issue
     

@@ -1,0 +1,23 @@
+BesselJLog_Rothwell
+=========================
+
+Calculate the log of the spherical Bessel function :math:`J_n(z)` using the method proposed by Rothwell 2018.
+
+Syntax
+---------------
+``[J, J_prime] = BesselJLog_Rothwell(N, z)``
+
+Output arguments
+------------------
+- **J** --- :math:`\ln J_n(z)`
+- **J_prime** --- :math:`\ln J_n'(z)`
+
+Input arguments
+---------------
+- **N** --- maximal order
+- **z** --- the argument :math:`z`
+
+Dependencies
+---------------
+- ``ContFracLentz.m``
+
