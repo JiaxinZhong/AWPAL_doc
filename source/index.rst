@@ -10,8 +10,14 @@ AWPAL DOCUMENTATION
    :maxdepth: 2
    :caption: Contents:
 
+   quick/quick
    function/function
+   issue/issue
     
+
+See :cite:t:`Zwicker2006PsychoacousticsFactsModels` 
+
+.. bibliography::
 
 Indices and tables
 ==================

@@ -10,7 +10,9 @@ AWPAL DOCUMENTATION
    :maxdepth: 2
    :caption: Contents:
 
+   quick/quick
    function/function
+   issue/issue
     
 
 Indices and tables
