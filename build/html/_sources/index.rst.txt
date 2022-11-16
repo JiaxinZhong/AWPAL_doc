@@ -10,7 +10,8 @@ AWPAL DOCUMENTATION
    :maxdepth: 2
    :caption: Contents:
 
-
+   function/function
+    
 
 Indices and tables
 ==================
