@@ -15,10 +15,6 @@ AWPAL DOCUMENTATION
    issue/issue
     
 
-See :cite:t:`Zwicker2006PsychoacousticsFactsModels` 
-
-.. bibliography::
-
 Indices and tables
 ==================
 
