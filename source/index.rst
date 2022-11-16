@@ -14,6 +14,7 @@ AWPAL DOCUMENTATION
    demo/demo
    function/function
    issue/issue
+   todo/todo
     
 
 Indices and tables
