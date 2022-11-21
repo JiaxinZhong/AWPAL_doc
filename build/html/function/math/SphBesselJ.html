@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BesselJLog_Rothwell.m &mdash; AWPAL  documentation</title>
+  <title>SphBesselJ.m &mdash; AWPAL  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,9 +18,7 @@
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Known Issues" href="../../issue/issue.html" />
-    <link rel="prev" title="Math" href="math.html" /> 
+    <link rel="search" title="Search" href="../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -39,23 +37,10 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../quick/quick.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../demo/demo.html">Demo Scripts</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../function.html">Function Lists</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="math.html">Math</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">BesselJLog_Rothwell.m</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#syntax">Syntax</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#output-arguments">Output arguments</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#input-arguments">Input arguments</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#dependencies">Dependencies</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="math.html#bessel-function">Bessel function</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../function.html">Function Lists</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../issue/issue.html">Known Issues</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../todo/todo.html">Todo List</a></li>
 </ul>
@@ -74,11 +59,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a></li>
-          <li class="breadcrumb-item"><a href="../function.html">Function Lists</a></li>
-          <li class="breadcrumb-item"><a href="math.html">Math</a></li>
-      <li class="breadcrumb-item active">BesselJLog_Rothwell.m</li>
+      <li class="breadcrumb-item active">SphBesselJ.m</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/function/math/BesselJLog_Rothwell.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/function/math/SphBesselJ.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -86,31 +69,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="besseljlog-rothwell-m">
-<h1>BesselJLog_Rothwell.m<a class="headerlink" href="#besseljlog-rothwell-m" title="Permalink to this headline">¶</a></h1>
-<p>Calculate the log of the spherical Bessel function <span class="math notranslate nohighlight">\(J_n(z)\)</span> using the method proposed by Rothwell 2018.</p>
+  <section id="sphbesselj-m">
+<h1>SphBesselJ.m<a class="headerlink" href="#sphbesselj-m" title="Permalink to this headline">¶</a></h1>
+<p>Calculate the spherical Bessel function
+<span class="math notranslate nohighlight">\(J_n(z)\)</span>.</p>
 <section id="syntax">
 <h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">[J,</span> <span class="pre">J_prime]</span> <span class="pre">=</span> <span class="pre">BesselJLog_Rothwell(N,</span> <span class="pre">z)</span></code></p>
-</section>
-<section id="output-arguments">
-<h2>Output arguments<a class="headerlink" href="#output-arguments" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><strong>J</strong> — <span class="math notranslate nohighlight">\(\ln J_n(z)\)</span></p></li>
-<li><p><strong>J_prime</strong> — <span class="math notranslate nohighlight">\(\ln J_n'(z)\)</span></p></li>
-</ul>
+<p><code class="docutils literal notranslate"><span class="pre">J</span> <span class="pre">=</span> <span class="pre">SphBesselJ(n,</span> <span class="pre">z)</span></code></p>
 </section>
 <section id="input-arguments">
 <h2>Input arguments<a class="headerlink" href="#input-arguments" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><strong>N</strong> — maximal order</p></li>
+<li><p><strong>n</strong> — the order <span class="math notranslate nohighlight">\(n\)</span></p></li>
 <li><p><strong>z</strong> — the argument <span class="math notranslate nohighlight">\(z\)</span></p></li>
-</ul>
-</section>
-<section id="dependencies">
-<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ContFracLentz.m</span></code></p></li>
 </ul>
 </section>
 </section>
@@ -118,10 +89,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="math.html" class="btn btn-neutral float-left" title="Math" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../../issue/issue.html" class="btn btn-neutral float-right" title="Known Issues" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 
