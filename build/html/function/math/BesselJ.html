@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BesselJ.m &mdash; AWPAL  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="BesselJLog_Rothwell.m" href="BesselJLog_Rothwell.html" />
+    <link rel="prev" title="Math" href="math.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> AWPAL
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../quick/quick.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../demo/demo.html">Demo Scripts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../function.html">Function Lists</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../auxiliary/auxiliary.html">Auxiliary Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="math.html">Math</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="math.html#bessel-functions">Bessel functions</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">BesselJ.m</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BesselJLog_Rothwell.html">BesselJLog_Rothwell.m</a></li>
+<li class="toctree-l4"><a class="reference internal" href="HankelHLog_Rothwell.html">HankelHLog_Rothwell.m</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SphBesselJ.html">SphBesselJ.m</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../issue/issue.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo/todo.html">Todo List</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">AWPAL</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../function.html">Function Lists</a></li>
+          <li class="breadcrumb-item"><a href="math.html">Math</a></li>
+      <li class="breadcrumb-item active">BesselJ.m</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/function/math/BesselJ.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="besselj-m">
+<h1>BesselJ.m<a class="headerlink" href="#besselj-m" title="Permalink to this headline">¶</a></h1>
+<p>Calculate the Bessel function of the first kind
+<span class="math notranslate nohighlight">\(J_m(z)\)</span>.</p>
+<section id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">J</span> <span class="pre">=</span> <span class="pre">BesselJ(m,</span> <span class="pre">z,</span> <span class="pre">varargin)</span></code></p>
+</section>
+<section id="input-arguments">
+<h2>Input arguments<a class="headerlink" href="#input-arguments" title="Permalink to this headline">¶</a></h2>
+<section id="mandatory-arguments">
+<h3>Mandatory arguments<a class="headerlink" href="#mandatory-arguments" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">m</span></code></p>
+<ul>
+<li><p>The order <span class="math notranslate nohighlight">\(m\in \mathbb{Z}\)</span></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">z</span></code></p>
+<ul>
+<li><p>The argument <span class="math notranslate nohighlight">\(z\)</span></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="optional-arguments">
+<h3>Optional arguments<a class="headerlink" href="#optional-arguments" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">'is_log'</span> <span class="pre">=</span> <span class="pre">false</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">true</span></code> — Return the logarithm of the result, i.e., <span class="math notranslate nohighlight">\(\ln J_m(z)\)</span></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'nu0'</span> <span class="pre">=</span> <span class="pre">0</span></code></p>
+<ul>
+<li><p>Return <span class="math notranslate nohighlight">\(J_{m+\nu_0}(z)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(0 &lt; \nu_0 &lt; 1\)</span></p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="math.html" class="btn btn-neutral float-left" title="Math" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="BesselJLog_Rothwell.html" class="btn btn-neutral float-right" title="BesselJLog_Rothwell.m" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jiaxin Zhong.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

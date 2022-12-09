@@ -16,6 +16,9 @@ AWPAL DOCUMENTATION
    issue/issue
    todo/todo
     
+See :cite:t:`1987:nelson` for 
+
+.. bibliography::
 
 Indices and tables
 ==================
