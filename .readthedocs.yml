@@ -15,9 +15,9 @@ formats:
 python:
     # version: 3.7
     install:
-      # - requirements: source/requirements.txt
+      - requirements: source/requirements.txt
       - method: pip
-        path: .
+        # path: .
         # extra_requirements:
          # - sphinxcontrib-bibtex
     # system_packages: false
