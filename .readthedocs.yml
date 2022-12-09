@@ -18,6 +18,6 @@ python:
       # - requirements: source/requirements.txt
       - method: pip
         path: .
-        extra_requirements:
-         - sphinxcontrib-bibtex
+        # extra_requirements:
+         # - sphinxcontrib-bibtex
     # system_packages: false
