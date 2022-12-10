@@ -62,5 +62,15 @@ html_css_files = [
     'css/custom.css',
 ]
 
-#  def setup(app):
-    #  app.add_css_file('css/custom.css')
+# Set this option to True if you want all displayed math to be numbered. The default is False.
+math_number_all = True  
+# gets rendered as, for example, (10).
+math_eqref_format = '({number})'  
+
+# see http://www.sphinx-doc.org/en/master/usage/configuration.html#confval-numfig
+# If true, figures, tables and code-blocks are automatically numbered if they have a caption.
+# The numref role is enabled. Obeyed so far only by HTML and LaTeX builders. Default is False.
+# The LaTeX builder always assigns numbers whether this option is enabled or not.
+numfig = True
+numfig_secnum_depth = 2
+
