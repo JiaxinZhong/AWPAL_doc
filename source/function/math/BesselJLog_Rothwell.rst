@@ -1,7 +1,7 @@
 BesselJLog_Rothwell.m
 =========================
 
-Calculate the log of the spherical Bessel function :math:`J_n(z)` using the method proposed by Rothwell 2018.
+Calculate the log of the spherical Bessel function :math:`J_n(z)` using the method proposed in :cite:t:`Rothwell2008ComputationLogarithmBessel`.
 
 Syntax
 ---------------
@@ -20,4 +20,5 @@ Input arguments
 Dependencies
 ---------------
 - ``ContFracLentz.m``
+
 

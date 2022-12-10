@@ -48,7 +48,4 @@ Dependencies
 ---------------
 NA
 
-References
---------------------
-.. bibliography::
 

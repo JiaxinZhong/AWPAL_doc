@@ -29,6 +29,7 @@ author = 'Jiaxin Zhong'
 # ones.
 extensions = ['sphinxcontrib.bibtex']
 bibtex_bibfiles = ['awpal.bib']
+bibtex_default_style = 'unsrt'
 
 
 

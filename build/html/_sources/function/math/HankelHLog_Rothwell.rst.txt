@@ -1,7 +1,7 @@
 HankelHLog_Rothwell.m
 =========================
 
-Calculate the log of the spherical Hankel function :math:`H_m(z)` using the method proposed by Rothwell 2018.
+Calculate the log of the spherical Hankel function :math:`H_m(z)` using the method proposed in :cite:t:`Rothwell2008ComputationLogarithmBessel`.
 
 Syntax
 ---------------
