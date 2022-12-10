@@ -23,6 +23,10 @@ Input arguments
 .. math:: e^{i\pi} + 1 = 0
    :label: euler
 
+
+.. math:: p=f(x)
+  :label: eq:pfx
+
 .. math::
    H_m^{(1)}(z) 
    \sim \sqrt{\frac{2}{\mathrm{i}\pi z}} 
