@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Math &mdash; AWPAL  documentation</title>
+  <title>HankelH_Asym.m &mdash; AWPAL  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -15,11 +15,12 @@
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="BesselJ.m" href="BesselJ.html" />
-    <link rel="prev" title="CheckDim.m" href="../auxiliary/CheckDim.html" /> 
+    <link rel="next" title="HankelHLog_Rothwell.m" href="HankelHLog_Rothwell.html" />
+    <link rel="prev" title="BesselJLog_Rothwell.m" href="BesselJLog_Rothwell.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,11 +44,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../demo/demo.html">Demo Scripts</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../function.html">Function Lists</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../auxiliary/auxiliary.html">Auxiliary Functions</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Math</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#bessel-functions">Bessel functions</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="math.html">Math</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="math.html#bessel-functions">Bessel functions</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="BesselJ.html">BesselJ.m</a></li>
 <li class="toctree-l4"><a class="reference internal" href="BesselJLog_Rothwell.html">BesselJLog_Rothwell.m</a></li>
-<li class="toctree-l4"><a class="reference internal" href="HankelH_Asym.html">HankelH_Asym.m</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">HankelH_Asym.m</a></li>
 <li class="toctree-l4"><a class="reference internal" href="HankelHLog_Rothwell.html">HankelHLog_Rothwell.m</a></li>
 <li class="toctree-l4"><a class="reference internal" href="SphBesselJ.html">SphBesselJ.m</a></li>
 </ul>
@@ -75,9 +76,10 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a></li>
           <li class="breadcrumb-item"><a href="../function.html">Function Lists</a></li>
-      <li class="breadcrumb-item active">Math</li>
+          <li class="breadcrumb-item"><a href="math.html">Math</a></li>
+      <li class="breadcrumb-item active">HankelH_Asym.m</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/function/math/math.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/function/math/HankelH_Asym.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -85,18 +87,39 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="math">
-<h1>Math<a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h1>
-<section id="bessel-functions">
-<h2>Bessel functions<a class="headerlink" href="#bessel-functions" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="BesselJ.html">BesselJ.m</a></li>
-<li class="toctree-l1"><a class="reference internal" href="BesselJLog_Rothwell.html">BesselJLog_Rothwell.m</a></li>
-<li class="toctree-l1"><a class="reference internal" href="HankelH_Asym.html">HankelH_Asym.m</a></li>
-<li class="toctree-l1"><a class="reference internal" href="HankelHLog_Rothwell.html">HankelHLog_Rothwell.m</a></li>
-<li class="toctree-l1"><a class="reference internal" href="SphBesselJ.html">SphBesselJ.m</a></li>
+  <section id="hankelh-asym-m">
+<h1>HankelH_Asym.m<a class="headerlink" href="#hankelh-asym-m" title="Permalink to this headline">¶</a></h1>
+<p>Calculate the Hankel function <span class="math notranslate nohighlight">\(H_m(z)\)</span> using the asymptotic method.</p>
+<p>See Eq. (10.17.5) in <span id="id1">Olver <em>et al.</em> [<a class="reference internal" href="#id4" title="F. W. J. Olver, A. B. Olde Daalhuis, D. W. Lozier, B. I. Schneider, R. F. Boisvert, C. W. Clark, B. R. Miller, B. V. Saunders, H. S. Cohl, and M. A. McClain. NIST Digital Library of Mathematical Functions Release 1.0.25 of 2019-12-15. URL: http://dlmf.nist.gov/.">ODL+</a>]</span>.</p>
+<section id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">H</span> <span class="pre">=</span> <span class="pre">HankelH_Asym(m,</span> <span class="pre">z)</span></code></p>
+</section>
+<section id="output-arguments">
+<h2>Output arguments<a class="headerlink" href="#output-arguments" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>H</strong> — <span class="math notranslate nohighlight">\(\ln H_m(z)\)</span></p></li>
 </ul>
+</section>
+<section id="input-arguments">
+<h2>Input arguments<a class="headerlink" href="#input-arguments" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>m</strong> — order</p></li>
+<li><p><strong>z</strong> — the argument <span class="math notranslate nohighlight">\(z\)</span></p></li>
+</ul>
+</section>
+<section id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
+<p>NA</p>
+</section>
+<section id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
+<div class="docutils container" id="id2">
+<dl class="citation">
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id1">ODL+</a></span></dt>
+<dd><p>F. W. J. Olver, A. B. Olde Daalhuis, D. W. Lozier, B. I. Schneider, R. F. Boisvert, C. W. Clark, B. R. Miller, B. V. Saunders, H. S. Cohl, and M. A. McClain. NIST Digital Library of Mathematical Functions Release 1.0.25 of 2019-12-15. URL: <a class="reference external" href="http://dlmf.nist.gov/">http://dlmf.nist.gov/</a>.</p>
+</dd>
+</dl>
 </div>
 </section>
 </section>
@@ -105,8 +128,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../auxiliary/CheckDim.html" class="btn btn-neutral float-left" title="CheckDim.m" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="BesselJ.html" class="btn btn-neutral float-right" title="BesselJ.m" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="BesselJLog_Rothwell.html" class="btn btn-neutral float-left" title="BesselJLog_Rothwell.m" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="HankelHLog_Rothwell.html" class="btn btn-neutral float-right" title="HankelHLog_Rothwell.m" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
