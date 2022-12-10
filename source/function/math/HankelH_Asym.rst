@@ -18,6 +18,18 @@ Input arguments
 - **m** --- order
 - **z** --- the argument :math:`z`
 
+:eq:`Hm1`
+
+.. math:: e^{i\pi} + 1 = 0
+   :label: euler
+
+.. math::
+   H_m^{(1)}(z) 
+   \sim \sqrt{\frac{2}{\mathrm{i}\pi z}} 
+   \frac{\mathrm{e}^{\mathrm{i}z}}{\mathrm{i}^m}
+   :label: Hm1
+
+
 Dependencies
 ---------------
 NA
