@@ -8,6 +8,7 @@ Bessel functions
 
    BesselJ
    BesselJLog_Rothwell
+   HankelH
    HankelH_Asym
    HankelHLog_Rothwell
    SphBesselJ
