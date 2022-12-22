@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3.2.1.4. HankelH_Asym.m &mdash; AWPAL  documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>3.2.1.8. SphHankelH_Asym.m &mdash; AWPAL  documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -17,8 +17,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3.2.1.5. HankelHLog_Rothwell.m" href="HankelHLog_Rothwell.html" />
-    <link rel="prev" title="3.2.1.3. HankelH.m" href="HankelH.html" /> 
+    <link rel="next" title="4. Known Issues" href="../../issue/issue.html" />
+    <link rel="prev" title="3.2.1.7. SphHankelH.m" href="SphHankelH.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,10 +47,11 @@
 <li class="toctree-l4"><a class="reference internal" href="BesselJ.html">3.2.1.1. BesselJ.m</a></li>
 <li class="toctree-l4"><a class="reference internal" href="BesselJLog_Rothwell.html">3.2.1.2. BesselJLog_Rothwell.m</a></li>
 <li class="toctree-l4"><a class="reference internal" href="HankelH.html">3.2.1.3. HankelH.m</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">3.2.1.4. HankelH_Asym.m</a></li>
+<li class="toctree-l4"><a class="reference internal" href="HankelH_Asym.html">3.2.1.4. HankelH_Asym.m</a></li>
 <li class="toctree-l4"><a class="reference internal" href="HankelHLog_Rothwell.html">3.2.1.5. HankelHLog_Rothwell.m</a></li>
 <li class="toctree-l4"><a class="reference internal" href="SphBesselJ.html">3.2.1.6. SphBesselJ.m</a></li>
-<li class="toctree-l4"><a class="reference internal" href="SphHankelH_Asym.html">3.2.1.7. SphHankelH_Asym.m</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SphHankelH.html">3.2.1.7. SphHankelH.m</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">3.2.1.8. SphHankelH_Asym.m</a></li>
 </ul>
 </li>
 </ul>
@@ -77,9 +78,9 @@
       <li><a href="../../index.html" class="icon icon-home"></a></li>
           <li class="breadcrumb-item"><a href="../function.html"><span class="section-number">3. </span>Function Lists</a></li>
           <li class="breadcrumb-item"><a href="math.html"><span class="section-number">3.2. </span>Math</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">3.2.1.4. </span>HankelH_Asym.m</li>
+      <li class="breadcrumb-item active"><span class="section-number">3.2.1.8. </span>SphHankelH_Asym.m</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/function/math/HankelH_Asym.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/function/math/SphHankelH_Asym.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -87,49 +88,45 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="hankelh-asym-m">
-<span id="id1"></span><h1><span class="section-number">3.2.1.4. </span>HankelH_Asym.m<a class="headerlink" href="#hankelh-asym-m" title="Permalink to this headline">¶</a></h1>
-<p>Calculate the Hankel function <span class="math notranslate nohighlight">\(H_m(z)\)</span> using the asymptotic method.</p>
+  <div class="section" id="sphhankelh-asym-m">
+<h1><span class="section-number">3.2.1.8. </span>SphHankelH_Asym.m<a class="headerlink" href="#sphhankelh-asym-m" title="Permalink to this headline">¶</a></h1>
+<p>Calculate the spherical Hankel function <span class="math notranslate nohighlight">\(\mathrm{h}_n(z)\)</span> using the asymptotic expansion.</p>
 <div class="section" id="syntax">
-<h2><span class="section-number">3.2.1.4.1. </span>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">H</span> <span class="pre">=</span> <span class="pre">HankelH_Asym(m,</span> <span class="pre">z)</span></code></p>
+<h2><span class="section-number">3.2.1.8.1. </span>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">h</span> <span class="pre">=</span> <span class="pre">SphHankelH_Asym(n,</span> <span class="pre">z)</span></code></p>
 </div>
 <div class="section" id="output-arguments">
-<h2><span class="section-number">3.2.1.4.2. </span>Output arguments<a class="headerlink" href="#output-arguments" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">H</span></code> — <span class="math notranslate nohighlight">\(H_m(z)\)</span>.</p>
+<h2><span class="section-number">3.2.1.8.2. </span>Output arguments<a class="headerlink" href="#output-arguments" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">h</span></code> — <span class="math notranslate nohighlight">\(\mathrm{h}_n(z)\)</span>.</p>
 </div>
 <div class="section" id="input-arguments">
-<h2><span class="section-number">3.2.1.4.3. </span>Input arguments<a class="headerlink" href="#input-arguments" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.2.1.8.3. </span>Input arguments<a class="headerlink" href="#input-arguments" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="mandatory-arguments">
-<h3><span class="section-number">3.2.1.4.3.1. </span>Mandatory arguments<a class="headerlink" href="#mandatory-arguments" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">m</span></code> — order</p>
+<h3><span class="section-number">3.2.1.8.3.1. </span>Mandatory arguments<a class="headerlink" href="#mandatory-arguments" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">n</span></code> — order</p>
 <p><code class="docutils literal notranslate"><span class="pre">z</span></code> — the argument <span class="math notranslate nohighlight">\(z\)</span></p>
 </div>
 <div class="section" id="optional-arguments">
-<h3><span class="section-number">3.2.1.4.3.2. </span>Optional arguments<a class="headerlink" href="#optional-arguments" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.2.1.8.3.2. </span>Optional arguments<a class="headerlink" href="#optional-arguments" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">approx_order</span></code></p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(K\in \mathbb{N}\)</span> — Calculate the Hankel function using the asymptotic expansion given by Eq. <a class="reference internal" href="#equation-h90239rj2309">(3.2.1)</a>, see Eq. (10.17.5) in <span id="id2">Olver <em>et al.</em> [<a class="reference internal" href="../../index.html#id2" title="F. W. J. Olver, A. B. Olde Daalhuis, D. W. Lozier, B. I. Schneider, R. F. Boisvert, C. W. Clark, B. R. Miller, B. V. Saunders, H. S. Cohl, and M. A. McClain. NIST Digital Library of Mathematical Functions Release 1.0.25 of 2019-12-15. URL: http://dlmf.nist.gov/.">5</a>]</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(K\in \mathbb{N}\)</span> — Calculate the spherical Hankel function using the asymptotic expansion.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> — The returned result reduces to Eq. <a class="reference internal" href="#equation-hn23">(3.2.3)</a>, see Eq. (10.52.4) in <span id="id1">Olver <em>et al.</em> [<a class="reference internal" href="../../index.html#id2" title="F. W. J. Olver, A. B. Olde Daalhuis, D. W. Lozier, B. I. Schneider, R. F. Boisvert, C. W. Clark, B. R. Miller, B. V. Saunders, H. S. Cohl, and M. A. McClain. NIST Digital Library of Mathematical Functions Release 1.0.25 of 2019-12-15. URL: http://dlmf.nist.gov/.">5</a>]</span>.</p></li>
 </ul>
-<div class="math notranslate nohighlight" id="equation-h90239rj2309">
-<span class="eqno">(3.2.1)<a class="headerlink" href="#equation-h90239rj2309" title="Permalink to this equation">¶</a></span>\[H_m^{(1)}(z)
+<div class="math notranslate nohighlight" id="equation-hn23">
+<span class="eqno">(3.2.3)<a class="headerlink" href="#equation-hn23" title="Permalink to this equation">¶</a></span>\[\mathrm{h}_n^{(1)}(z)
 \sim
-\sqrt{\frac{2}{\pi z}}
-\mathrm{e}^{-\mathrm{i}\omega}
-\sum_{k=0}^K \mathrm{i}^k
-\frac{a_k(m)}{z^k}\]</div>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> — The returned result reduces to Eq. <a class="reference internal" href="#equation-hm1">(3.2.2)</a>, see Eq. (10.2.5) in <span id="id3">Olver <em>et al.</em> [<a class="reference internal" href="../../index.html#id2" title="F. W. J. Olver, A. B. Olde Daalhuis, D. W. Lozier, B. I. Schneider, R. F. Boisvert, C. W. Clark, B. R. Miller, B. V. Saunders, H. S. Cohl, and M. A. McClain. NIST Digital Library of Mathematical Functions Release 1.0.25 of 2019-12-15. URL: http://dlmf.nist.gov/.">5</a>]</span>.</p></li>
-</ul>
-<div class="math notranslate nohighlight" id="equation-hm1">
-<span class="eqno">(3.2.2)<a class="headerlink" href="#equation-hm1" title="Permalink to this equation">¶</a></span>\[H_m^{(1)}(z)
-\sim \sqrt{\frac{2}{\mathrm{i}\pi z}}
-\frac{\mathrm{e}^{\mathrm{i}z}}{\mathrm{i}^m}\]</div>
+\frac{\mathrm{e}^{\mathrm{i}z}}{\mathrm{i}^{n+1}z}\]</div>
 </div>
 </div>
 <div class="section" id="dependencies">
-<h2><span class="section-number">3.2.1.4.4. </span>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
-<p>NA</p>
+<h2><span class="section-number">3.2.1.8.4. </span>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
+<p>The result is obtained by calculating the Hankel function using <a class="reference internal" href="HankelH_Asym.html#hankelh-asym-m"><span class="std std-ref">HankelH_Asym.m</span></a> with the relation by, see Eq. (10.47.5) in <span id="id2">Olver <em>et al.</em> [<a class="reference internal" href="../../index.html#id2" title="F. W. J. Olver, A. B. Olde Daalhuis, D. W. Lozier, B. I. Schneider, R. F. Boisvert, C. W. Clark, B. R. Miller, B. V. Saunders, H. S. Cohl, and M. A. McClain. NIST Digital Library of Mathematical Functions Release 1.0.25 of 2019-12-15. URL: http://dlmf.nist.gov/.">5</a>]</span>.</p>
+<div class="math notranslate nohighlight" id="equation-function-math-sphhankelh-asym-0">
+<span class="eqno">(3.2.4)<a class="headerlink" href="#equation-function-math-sphhankelh-asym-0" title="Permalink to this equation">¶</a></span>\[\mathrm{h}_n^{(1)}(z)
+=
+\sqrt{\frac{\pi}{2z}}
+H_{n+1/2}^{(1)}(z)\]</div>
 </div>
 </div>
 
@@ -137,8 +134,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="HankelH.html" class="btn btn-neutral float-left" title="3.2.1.3. HankelH.m" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="HankelHLog_Rothwell.html" class="btn btn-neutral float-right" title="3.2.1.5. HankelHLog_Rothwell.m" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="SphHankelH.html" class="btn btn-neutral float-left" title="3.2.1.7. SphHankelH.m" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../issue/issue.html" class="btn btn-neutral float-right" title="4. Known Issues" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

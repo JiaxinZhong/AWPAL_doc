@@ -38,3 +38,7 @@ Optional arguments
 
 - ``1`` -- Return the Hankel function of first kind
 - ``2`` -- Return the Hankel function of second kind
+
+``'arg_is_large' = false``
+
+- ``true`` -- Evaluate the function using the limiting form as shown by Eq. :eq:`Hm1`

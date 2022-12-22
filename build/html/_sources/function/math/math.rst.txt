@@ -12,5 +12,7 @@ Bessel functions
    HankelH_Asym
    HankelHLog_Rothwell
    SphBesselJ
+   SphHankelH
+   SphHankelH_Asym
 
 
