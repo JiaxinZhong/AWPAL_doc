@@ -13,6 +13,7 @@
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -81,6 +82,15 @@
              
   <div class="section" id="circsrc-swe-radial-m">
 <span id="circsrc-swe-radial"></span><h1><span class="section-number">3.3.2. </span>CircSrc_SWE_Radial.m<a class="headerlink" href="#circsrc-swe-radial-m" title="Permalink to this headline">¶</a></h1>
+<p>Calculate the radial component for the ultrasound when using the SWE.</p>
+<p>The radial component is expressed as</p>
+<div class="math notranslate nohighlight" id="equation-swe-radial">
+<span class="eqno">(3.3.2)<a class="headerlink" href="#equation-swe-radial" title="Permalink to this equation">¶</a></span>\[\mathcal{R}_{2\ell_i+|m_i|}(r)
+=
+\int_0^a u(r_\mathrm{s}/a)
+\mathrm{j}_{2\ell_i+|m_i|}(k_ir_{\mathrm{s},&lt;})
+\mathrm{h}_{2\ell_i+|m_i|}(k_ir_{\mathrm{s},&gt;})
+k_i^2 r_\mathrm{s} \mathrm{d} r_\mathrm{s}\]</div>
 </div>
 
 

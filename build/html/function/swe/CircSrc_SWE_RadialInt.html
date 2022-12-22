@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3.3. Spherical Wave Expansion (SWE) &mdash; AWPAL  documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>3.3.3. CircSrc_SWE_RadialInt.m &mdash; AWPAL  documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -13,11 +13,12 @@
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3.3.1. CircSrc_SWE.m" href="CircSrc_SWE.html" />
-    <link rel="prev" title="3.2.1.9. SphHankelH_Asym.m" href="../math/SphHankelH_Asym.html" /> 
+    <link rel="next" title="4. Known Issues" href="../../issue/issue.html" />
+    <link rel="prev" title="3.3.2. CircSrc_SWE_Radial.m" href="CircSrc_SWE_Radial.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,10 +43,10 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../function.html">3. Function Lists</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../auxiliary/auxiliary.html">3.1. Auxiliary Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../math/math.html">3.2. Math</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">3.3. Spherical Wave Expansion (SWE)</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="swe.html">3.3. Spherical Wave Expansion (SWE)</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="CircSrc_SWE.html">3.3.1. CircSrc_SWE.m</a></li>
 <li class="toctree-l3"><a class="reference internal" href="CircSrc_SWE_Radial.html">3.3.2. CircSrc_SWE_Radial.m</a></li>
-<li class="toctree-l3"><a class="reference internal" href="CircSrc_SWE_RadialInt.html">3.3.3. CircSrc_SWE_RadialInt.m</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3.3.3. CircSrc_SWE_RadialInt.m</a></li>
 </ul>
 </li>
 </ul>
@@ -69,9 +70,10 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a></li>
           <li class="breadcrumb-item"><a href="../function.html"><span class="section-number">3. </span>Function Lists</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">3.3. </span>Spherical Wave Expansion (SWE)</li>
+          <li class="breadcrumb-item"><a href="swe.html"><span class="section-number">3.3. </span>Spherical Wave Expansion (SWE)</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3.3.3. </span>CircSrc_SWE_RadialInt.m</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/function/swe/swe.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/function/swe/CircSrc_SWE_RadialInt.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -79,23 +81,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="spherical-wave-expansion-swe">
-<h1><span class="section-number">3.3. </span>Spherical Wave Expansion (SWE)<a class="headerlink" href="#spherical-wave-expansion-swe" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="CircSrc_SWE.html">3.3.1. CircSrc_SWE.m</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CircSrc_SWE_Radial.html">3.3.2. CircSrc_SWE_Radial.m</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CircSrc_SWE_RadialInt.html">3.3.3. CircSrc_SWE_RadialInt.m</a></li>
-</ul>
-</div>
+  <div class="section" id="circsrc-swe-radialint-m">
+<span id="circsrc-swe-radialint"></span><h1><span class="section-number">3.3.3. </span>CircSrc_SWE_RadialInt.m<a class="headerlink" href="#circsrc-swe-radialint-m" title="Permalink to this headline">¶</a></h1>
+<p>Calculate the integral involved in the radial component for the ultrasound when using the SWE.</p>
+<p>The integral is</p>
+<div class="math notranslate nohighlight" id="equation-function-swe-circsrc-swe-radialint-0">
+<span class="eqno">(3.3.3)<a class="headerlink" href="#equation-function-swe-circsrc-swe-radialint-0" title="Permalink to this equation">¶</a></span>\[\int_{r_1}^{r_2}
+u(r_\mathrm{s}/a)
+\mathrm{j}_n(kr_{\mathrm{s,&lt;}})
+\mathrm{h}_n(kr_{\mathrm{s,&gt;}})
+k^2 r_\mathrm{s} \mathrm{d} r_\mathrm{s}\]</div>
 </div>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../math/SphHankelH_Asym.html" class="btn btn-neutral float-left" title="3.2.1.9. SphHankelH_Asym.m" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="CircSrc_SWE.html" class="btn btn-neutral float-right" title="3.3.1. CircSrc_SWE.m" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="CircSrc_SWE_Radial.html" class="btn btn-neutral float-left" title="3.3.2. CircSrc_SWE_Radial.m" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../issue/issue.html" class="btn btn-neutral float-right" title="4. Known Issues" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -6,3 +6,4 @@ Spherical Wave Expansion (SWE)
 
    CircSrc_SWE
    CircSrc_SWE_Radial
+   CircSrc_SWE_RadialInt
