@@ -6,5 +6,6 @@ Function Lists
 
    auxiliary/auxiliary
    math/math
+   swe/swe
 
 Test

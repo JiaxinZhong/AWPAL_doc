@@ -1,9 +1,9 @@
 Ultrasound Field
 =======================
 
-
 Demo 1: `CircSrc_SWE_Demo1.m`
 ------------------------------------------
+Plot the 2D ultrasound field.
 
 Parameters
 ^^^^^^^^^^^^^^^^
@@ -14,3 +14,7 @@ Aperture size                   10 cm
 Source profile                  Uniform (piston source)
 Ultrasound frequency            40 kHz
 ============================== ==============================
+
+Demo 2: `CircSrc_SWE_Demo2.m`
+----------------------------------------
+Calculate the directivity using the SWE.

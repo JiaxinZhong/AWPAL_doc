@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3.2. Math &mdash; AWPAL  documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>3.3.2. CircSrc_SWE_Radial.m &mdash; AWPAL  documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -16,8 +16,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3.2.1.1. Template.m" href="Template.html" />
-    <link rel="prev" title="3.1.1. CheckDim.m" href="../auxiliary/CheckDim.html" /> 
+    <link rel="next" title="4. Known Issues" href="../../issue/issue.html" />
+    <link rel="prev" title="3.3.1. CircSrc_SWE.m" href="CircSrc_SWE.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,22 +41,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../demo/demo.html">2. Demo Scripts</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../function.html">3. Function Lists</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../auxiliary/auxiliary.html">3.1. Auxiliary Functions</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">3.2. Math</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#bessel-functions">3.2.1. Bessel functions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="Template.html">3.2.1.1. Template.m</a></li>
-<li class="toctree-l4"><a class="reference internal" href="BesselJ.html">3.2.1.2. BesselJ.m</a></li>
-<li class="toctree-l4"><a class="reference internal" href="BesselJLog_Rothwell.html">3.2.1.3. BesselJLog_Rothwell.m</a></li>
-<li class="toctree-l4"><a class="reference internal" href="HankelH.html">3.2.1.4. HankelH.m</a></li>
-<li class="toctree-l4"><a class="reference internal" href="HankelH_Asym.html">3.2.1.5. HankelH_Asym.m</a></li>
-<li class="toctree-l4"><a class="reference internal" href="HankelHLog_Rothwell.html">3.2.1.6. HankelHLog_Rothwell.m</a></li>
-<li class="toctree-l4"><a class="reference internal" href="SphBesselJ.html">3.2.1.7. SphBesselJ.m</a></li>
-<li class="toctree-l4"><a class="reference internal" href="SphHankelH.html">3.2.1.8. SphHankelH.m</a></li>
-<li class="toctree-l4"><a class="reference internal" href="SphHankelH_Asym.html">3.2.1.9. SphHankelH_Asym.m</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math/math.html">3.2. Math</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="swe.html">3.3. Spherical Wave Expansion (SWE)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="CircSrc_SWE.html">3.3.1. CircSrc_SWE.m</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3.3.2. CircSrc_SWE_Radial.m</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../swe/swe.html">3.3. Spherical Wave Expansion (SWE)</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../issue/issue.html">4. Known Issues</a></li>
@@ -78,9 +68,10 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a></li>
           <li class="breadcrumb-item"><a href="../function.html"><span class="section-number">3. </span>Function Lists</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">3.2. </span>Math</li>
+          <li class="breadcrumb-item"><a href="swe.html"><span class="section-number">3.3. </span>Spherical Wave Expansion (SWE)</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3.3.2. </span>CircSrc_SWE_Radial.m</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/function/math/math.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/function/swe/CircSrc_SWE_Radial.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -88,32 +79,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="math">
-<h1><span class="section-number">3.2. </span>Math<a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="bessel-functions">
-<h2><span class="section-number">3.2.1. </span>Bessel functions<a class="headerlink" href="#bessel-functions" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Template.html">3.2.1.1. Template.m</a></li>
-<li class="toctree-l1"><a class="reference internal" href="BesselJ.html">3.2.1.2. BesselJ.m</a></li>
-<li class="toctree-l1"><a class="reference internal" href="BesselJLog_Rothwell.html">3.2.1.3. BesselJLog_Rothwell.m</a></li>
-<li class="toctree-l1"><a class="reference internal" href="HankelH.html">3.2.1.4. HankelH.m</a></li>
-<li class="toctree-l1"><a class="reference internal" href="HankelH_Asym.html">3.2.1.5. HankelH_Asym.m</a></li>
-<li class="toctree-l1"><a class="reference internal" href="HankelHLog_Rothwell.html">3.2.1.6. HankelHLog_Rothwell.m</a></li>
-<li class="toctree-l1"><a class="reference internal" href="SphBesselJ.html">3.2.1.7. SphBesselJ.m</a></li>
-<li class="toctree-l1"><a class="reference internal" href="SphHankelH.html">3.2.1.8. SphHankelH.m</a></li>
-<li class="toctree-l1"><a class="reference internal" href="SphHankelH_Asym.html">3.2.1.9. SphHankelH_Asym.m</a></li>
-</ul>
-</div>
-</div>
+  <div class="section" id="circsrc-swe-radial-m">
+<span id="circsrc-swe-radial"></span><h1><span class="section-number">3.3.2. </span>CircSrc_SWE_Radial.m<a class="headerlink" href="#circsrc-swe-radial-m" title="Permalink to this headline">¶</a></h1>
 </div>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../auxiliary/CheckDim.html" class="btn btn-neutral float-left" title="3.1.1. CheckDim.m" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Template.html" class="btn btn-neutral float-right" title="3.2.1.1. Template.m" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="CircSrc_SWE.html" class="btn btn-neutral float-left" title="3.3.1. CircSrc_SWE.m" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../issue/issue.html" class="btn btn-neutral float-right" title="4. Known Issues" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
