@@ -1,4 +1,4 @@
-Function Lists
+Functions
 =======================
 
  .. toctree::

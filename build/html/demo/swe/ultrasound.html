@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2.2.1. Ultrasound Field &mdash; AWPAL  documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>2.3.1. Ultrasound Field &mdash; AWPAL  documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -16,8 +16,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.2.2. Audio Sound Field" href="audio.html" />
-    <link rel="prev" title="2.2. Spherical Wave Expansion (SWE)" href="swe.html" /> 
+    <link rel="next" title="2.3.2. Audio Sound Field" href="audio.html" />
+    <link rel="prev" title="2.3. Spherical Wave Expansion (SWE)" href="swe.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -40,18 +40,19 @@
 <li class="toctree-l1"><a class="reference internal" href="../../quick/quick.html">1. Getting Started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../demo.html">2. Demo Scripts</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../cdm/cdm.html">2.1. Convolution Directivity Model (CDM)</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="swe.html">2.2. Spherical Wave Expansion (SWE)</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">2.2.1. Ultrasound Field</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#demo-1-circsrc-swe-demo1-m">2.2.1.1. Demo 1: <cite>CircSrc_SWE_Demo1.m</cite></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#demo-2-circsrc-swe-demo2-m">2.2.1.2. Demo 2: <cite>CircSrc_SWE_Demo2.m</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cwe/cwe.html">2.2. Cylindrical Wave Expansion (CWE)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="swe.html">2.3. Spherical Wave Expansion (SWE)</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.3.1. Ultrasound Field</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#demo-1-circsrc-swe-demo1-m">2.3.1.1. Demo 1: <cite>CircSrc_SWE_Demo1.m</cite></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#demo-2-circsrc-swe-demo2-m">2.3.1.2. Demo 2: <cite>CircSrc_SWE_Demo2.m</cite></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="audio.html">2.2.2. Audio Sound Field</a></li>
+<li class="toctree-l3"><a class="reference internal" href="audio.html">2.3.2. Audio Sound Field</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../function/function.html">3. Function Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../function/function.html">3. Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../issue/issue.html">4. Known Issues</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../todo/todo.html">5. Todo List</a></li>
 </ul>
@@ -71,8 +72,8 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a></li>
           <li class="breadcrumb-item"><a href="../demo.html"><span class="section-number">2. </span>Demo Scripts</a></li>
-          <li class="breadcrumb-item"><a href="swe.html"><span class="section-number">2.2. </span>Spherical Wave Expansion (SWE)</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">2.2.1. </span>Ultrasound Field</li>
+          <li class="breadcrumb-item"><a href="swe.html"><span class="section-number">2.3. </span>Spherical Wave Expansion (SWE)</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">2.3.1. </span>Ultrasound Field</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/demo/swe/ultrasound.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -83,12 +84,12 @@
            <div itemprop="articleBody">
              
   <div class="section" id="ultrasound-field">
-<h1><span class="section-number">2.2.1. </span>Ultrasound Field<a class="headerlink" href="#ultrasound-field" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2.3.1. </span>Ultrasound Field<a class="headerlink" href="#ultrasound-field" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="demo-1-circsrc-swe-demo1-m">
-<h2><span class="section-number">2.2.1.1. </span>Demo 1: <cite>CircSrc_SWE_Demo1.m</cite><a class="headerlink" href="#demo-1-circsrc-swe-demo1-m" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3.1.1. </span>Demo 1: <cite>CircSrc_SWE_Demo1.m</cite><a class="headerlink" href="#demo-1-circsrc-swe-demo1-m" title="Permalink to this headline">¶</a></h2>
 <p>Plot the 2D ultrasound field.</p>
 <div class="section" id="parameters">
-<h3><span class="section-number">2.2.1.1.1. </span>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.1.1.1. </span>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 50%" />
@@ -112,7 +113,7 @@
 </div>
 </div>
 <div class="section" id="demo-2-circsrc-swe-demo2-m">
-<h2><span class="section-number">2.2.1.2. </span>Demo 2: <cite>CircSrc_SWE_Demo2.m</cite><a class="headerlink" href="#demo-2-circsrc-swe-demo2-m" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3.1.2. </span>Demo 2: <cite>CircSrc_SWE_Demo2.m</cite><a class="headerlink" href="#demo-2-circsrc-swe-demo2-m" title="Permalink to this headline">¶</a></h2>
 <p>Calculate the directivity using the SWE.</p>
 </div>
 </div>
@@ -121,8 +122,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="swe.html" class="btn btn-neutral float-left" title="2.2. Spherical Wave Expansion (SWE)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="audio.html" class="btn btn-neutral float-right" title="2.2.2. Audio Sound Field" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="swe.html" class="btn btn-neutral float-left" title="2.3. Spherical Wave Expansion (SWE)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="audio.html" class="btn btn-neutral float-right" title="2.3.2. Audio Sound Field" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
