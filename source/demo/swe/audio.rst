@@ -3,6 +3,7 @@ Audio Sound Field
 
 Demo 1: `PalCircSrc_SWE_Demo1.m`
 ------------------------------------------
+Calculate the 2D audio sound field using the SWE.
 
 Parameters
 ^^^^^^^^^^^^^^^^
@@ -14,3 +15,8 @@ Source profile                  Uniform (piston source)
 Audio frequency                 1 kHz
 Ultrasound frequency            40 kHz
 ============================== ==============================
+
+
+Demo 2: `PalCircSrc_SWE_Demo2.m`
+------------------------------------------
+Calculate the directivity of the audio sound using the SWE.
