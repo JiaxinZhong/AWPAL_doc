@@ -8,7 +8,13 @@ Plot the 2D linear ultrasound field.
 Examples
 ^^^^^^^^^^^^^^^^
 
-See :numref:`fig_CircSrc_SWE_Demo1_2D`.
+See :numref:`fig_CircSrc_SWE_Demo1_2D`, where the source settings are as follows.
+
+
+..  code-block:: matlab
+
+    prf = SrcProfile('name', 'uniform');
+    src = CircSrc('radius', .1, 'prf', prf, 'freq', 40e3);
 
 .. _fig_CircSrc_SWE_Demo1_2D:
 .. figure:: ../../fig/CircSrc_SWE_Demo1_2D.png
