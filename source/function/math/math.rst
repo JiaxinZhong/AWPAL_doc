@@ -17,3 +17,11 @@ Bessel functions
    SphHankelH_Asym
 
 
+Wigner :math:`3j` symbol
+------------------------------
+.. toctree::
+   :maxdepth: 1
+
+   Wigner3j
+   Wigner3j_Racah
+   Wigner3j_Table
